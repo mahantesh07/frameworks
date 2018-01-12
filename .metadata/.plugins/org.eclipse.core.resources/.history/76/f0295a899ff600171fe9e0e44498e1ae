@@ -1,0 +1,5 @@
+package com.jspider.student;
+
+public class studentDTO {
+
+}

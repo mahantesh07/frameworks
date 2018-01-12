@@ -1,0 +1,26 @@
+package com.jspider.student;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+public class StudentDAO {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Configuration config=new Configuration();
+		config.configure();
+		
+		config.addAnnotatedClass(studentDTO.class);
+		
+		SessionFactory sess=config.buildSessionFactory();
+		Session session=sess.openSession();
+		
+		Transaction tr=session.beginTransaction();
+		tr.commit();
+
+	}
+
+}

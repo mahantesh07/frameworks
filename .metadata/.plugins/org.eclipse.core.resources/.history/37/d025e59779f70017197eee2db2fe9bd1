@@ -1,0 +1,12 @@
+package com.AutoGen.app;
+
+import javax.persistence.Entity;
+
+@Entity
+@Table(name="Dominos_Table")
+public class DominosDTO {
+
+		private String branch;
+		private long contactno;
+		private int numOforders;
+}

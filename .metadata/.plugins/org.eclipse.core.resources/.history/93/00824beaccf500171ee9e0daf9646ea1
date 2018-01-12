@@ -1,0 +1,36 @@
+package com.hibernate.App;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class LoadMusicDAO {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Configuration config= new Configuration();
+		config.configure();
+		
+		config.addAnnotatedClass(MusicDTO.class);
+		SessionFactory sf=config.buildSessionFactory();
+		
+		Session sess=sf.openSession();
+		
+	//	MusicDTO music=sess.load(MusicDTO.class, "shape of you");
+		
+		
+	/*	System.out.println(music.getArtist());
+		System.out.println(music.getYearOfRelease());
+		System.out.println(music.getLength());*/
+		
+		//update record in the DB
+		MusicDTO music=sess.load(MusicDTO.class, "shape of you")
+		music.setLength(5);
+		music.setYearOfRelease(2018);
+		
+		sess.update(music);
+
+	}
+
+}

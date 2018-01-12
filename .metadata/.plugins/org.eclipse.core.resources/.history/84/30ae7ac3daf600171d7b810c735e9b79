@@ -1,0 +1,14 @@
+package com.employee.app;
+
+import org.hibernate.cfg.Configuration;
+
+public class EmployeeDAO {
+
+	public static void main(String[] args) {
+		
+		Configuration config=new Configuration();
+		config.configure();
+
+	}
+
+}

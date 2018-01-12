@@ -1,0 +1,5 @@
+package com.hibernate.app;
+
+public class MusicDTO {
+
+}
